@@ -1,0 +1,200 @@
+.overview {
+  padding: 4rem 0;
+  background: var(--color-bg-alt, #000000);
+  color: var(--color-text, #E1E4EA);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-accent, #FFB800);
+}
+
+.cta {
+  display: block;
+  margin: 0 auto 2.5rem auto;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--color-accent-gradient, linear-gradient(225deg, #FFB800 0%, #FF7300 70%));
+  color: #181c20;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 12px 0 #FFB80033;
+}
+
+.cta:hover {
+  background: var(--color-accent, #FFB800);
+  color: #181c20;
+}
+
+.tableWrapper {
+  position: relative;
+  background: var(--color-bg, #0F1016);
+  border-radius: 18px;
+  box-shadow: none !important;
+  padding: 2rem 1rem 1.5rem 1rem;
+  overflow-x: auto;
+}
+
+.tableWrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  z-index: 0;
+  box-shadow: 0 0 48px 8px #ffb80055, 0 0 0 4px #ffb80022;
+}
+
+.comparisonTable {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.comparisonTable th,
+.comparisonTable td {
+  padding: 0.9rem 1.2rem;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.comparisonTable th {
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-border, #2A2E41);
+  color: var(--color-accent, #FFB800);
+  background: var(--color-bg-alt, #2A2E41);
+}
+
+.comparisonTable td {
+  border-bottom: 1px solid var(--color-border, #2A2E41);
+}
+
+.sliderRow {
+  background: none;
+  border: none;
+  padding: 1.2rem 0 0.5rem 0;
+  text-align: center;
+}
+
+.sliderLabel {
+  display: inline-block;
+  margin: 0 1.2rem 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted, #8792AB);
+}
+
+/* Force all range inputs to orange accent */
+input[type=range].slider,
+.slider {
+  width: 180px;
+  margin: 0 1.2rem 0 0;
+  accent-color: var(--color-accent, #FFB800) !important;
+  background: transparent !important;
+}
+
+/* Custom slider styles for Webkit browsers */
+input[type=range].slider::-webkit-slider-thumb,
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent, #FFB800) !important;
+  border: 2px solid #FF7300 !important;
+  box-shadow: 0 2px 8px #FFB80055 !important;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type=range].slider::-webkit-slider-thumb:hover,
+.slider::-webkit-slider-thumb:hover {
+  background: #FF7300 !important;
+}
+input[type=range].slider::-webkit-slider-runnable-track,
+.slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #FFB800 0%, #FF7300 100%) !important;
+}
+
+/* Custom slider styles for Firefox */
+input[type=range].slider::-moz-range-thumb,
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent, #FFB800) !important;
+  border: 2px solid #FF7300 !important;
+  box-shadow: 0 2px 8px #FFB80055 !important;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type=range].slider::-moz-range-thumb:hover,
+.slider::-moz-range-thumb:hover {
+  background: #FF7300 !important;
+}
+input[type=range].slider::-moz-range-track,
+.slider::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #FFB800 0%, #FF7300 100%) !important;
+}
+
+/* Custom slider styles for IE */
+input[type=range].slider::-ms-thumb,
+.slider::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent, #FFB800) !important;
+  border: 2px solid #FF7300 !important;
+  box-shadow: 0 2px 8px #FFB80055 !important;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type=range].slider::-ms-fill-lower,
+.slider::-ms-fill-lower {
+  background: #FFB800 !important;
+}
+input[type=range].slider::-ms-fill-upper,
+.slider::-ms-fill-upper {
+  background: #FF7300 !important;
+}
+
+.positive {
+  color: var(--color-accent, #FFB800) !important;
+  font-weight: 600;
+}
+
+.negative {
+  color: #FF7300 !important;
+  font-weight: 600;
+}
+
+.neutral {
+  color: var(--color-text, #E1E4EA) !important;
+  font-weight: 600;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+  text-align: left;
+} 

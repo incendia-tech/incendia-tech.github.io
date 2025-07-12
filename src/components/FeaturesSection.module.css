@@ -1,0 +1,125 @@
+.features {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 96px 0 120px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.header h2 {
+  font-size: 48px;
+  margin: 0 0 24px 0;
+  color: var(--color-text);
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background: var(--color-bg);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px 0 rgba(255,122,26,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  padding: 1.5rem;
+  min-height: 320px;
+  width: 100%;
+  max-width: 340px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: 'Inter', 'Manrope', sans-serif;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 32px;
+  width: 120px;
+  height: 60px;
+  background: radial-gradient(ellipse at top left, rgba(255, 186, 80, 0.45) 0%, rgba(255,255,255,0.18) 40%, transparent 80%);
+  filter: blur(8px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  z-index: 2;
+}
+
+.card h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  z-index: 2;
+  max-width: 90%;
+}
+
+.card p {
+  color: #b3b3b7;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+  z-index: 2;
+  max-width: 95%;
+}
+
+.card:hover {
+  box-shadow: 0 12px 48px 0 rgba(255,122,26,0.18), 0 2px 12px 0 rgba(0,0,0,0.12);
+  filter: brightness(1.03) blur(0.5px);
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .card {
+    max-width: 100%;
+    min-height: 0;
+    padding: 1.25rem;
+  }
+} 

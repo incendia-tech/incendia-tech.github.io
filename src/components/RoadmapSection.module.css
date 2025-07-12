@@ -1,0 +1,161 @@
+.roadmap {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 96px 0 120px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.header h2 {
+  font-size: 48px;
+  margin: 0 0 24px 0;
+  color: var(--color-text);
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.timelineContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 20px 0;
+  border-left: 2px solid var(--color-border);
+  padding-left: 48px;
+}
+
+.timelineItem::before {
+  content: none;
+}
+
+.dot {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-border);
+  z-index: 2;
+}
+.doneDot {
+  background: #4DD0E1;
+}
+.ongoingDot {
+  background: #FFB800;
+}
+.todoDot {
+  background: var(--color-border);
+}
+
+.timelineItem:first-child::before {
+  background: var(--color-accent);
+}
+
+.milestone {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.milestone h3 {
+  font-size: 20px;
+  margin: 0;
+  color: var(--color-text);
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.done {
+  background: rgba(77, 208, 225, 0.1);
+  color: #4DD0E1;
+  border: 1px solid rgba(77, 208, 225, 0.2);
+}
+
+.ongoing {
+  background: rgba(255, 184, 0, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(255, 184, 0, 0.2);
+}
+
+.planned {
+  background: rgba(107, 114, 128, 0.1);
+  color: var(--color-text-muted);
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.todo {
+  background: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    padding: 80px 0;
+  }
+  
+  .header {
+    margin-bottom: 60px;
+  }
+  
+  .header h2 {
+    font-size: 36px;
+  }
+  
+  .header p {
+    font-size: 18px;
+  }
+  
+  .timelineItem {
+    padding: 24px 0;
+    padding-left: 32px;
+  }
+  
+  .milestone {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .milestone h3 {
+    font-size: 18px;
+  }
+} 

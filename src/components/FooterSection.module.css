@@ -1,0 +1,128 @@
+.footer {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 56px 0 0 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 56px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logoIcon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.logoText {
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.3rem;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.6;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.linksCol h4 {
+  font-size: 1rem;
+  margin: 0 0 18px 0;
+  color: var(--color-text);
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.linksCol a {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 100ms;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.linksCol a:hover {
+  color: var(--color-text);
+}
+
+.copyrightRow {
+  padding: 32px 0 16px 0;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.copyrightRow span {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 0 0;
+  }
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+  .brandCol {
+    gap: 10px;
+  }
+  .logoRow {
+    font-size: 1.1rem;
+  }
+  .logoIcon {
+    font-size: 1.3rem;
+  }
+  .logoText {
+    font-size: 1.1rem;
+  }
+  .linksCol h4 {
+    font-size: 0.98rem;
+  }
+  .linksCol a, .description {
+    font-size: 0.95rem;
+  }
+  .copyrightRow {
+    padding: 18px 0 8px 0;
+    font-size: 0.9rem;
+  }
+} 

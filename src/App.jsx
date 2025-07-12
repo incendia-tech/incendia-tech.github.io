@@ -1,4 +1,10 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React from "react";
+import NavBar from "./components/NavBar";
+import HeroSection from "./components/HeroSection";
+import FeaturesSection from "./components/FeaturesSection";
+import RoadmapSection from "./components/RoadmapSection";
+import OverviewSection from "./components/OverviewSection";
+import FooterSection from "./components/FooterSection";
 import './App.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
@@ -49,14 +55,17 @@ function BottomBar() {
 
 export default function App() {
   return (
-    <div className="app-container">
-      <TopBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<CreateCeremony />} />
-        <Route path="/join" element={<JoinCeremony />} />
-      </Routes>
-      <BottomBar />
+    <div className="App">
+      <NavBar />
+      <HeroSection />
+      <FeaturesSection />
+      {/* Replace with Docs and Contacts sections below */}
+      {/* <PrivacySection /> */}
+      {/* <EconomicsSection /> */}
+      {/* <UseCasesSection /> */}
+      <RoadmapSection />
+      <OverviewSection />
+      <FooterSection />
     </div>
   );
 }

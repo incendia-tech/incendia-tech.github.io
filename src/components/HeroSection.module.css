@@ -1,0 +1,258 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 16px;
+  min-height: 100vh;
+  position: relative;
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+/* Subtle grid background - Sablier exact match */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Background glow layers */
+.glowLayer1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at bottom center, #545c82 -100%, #0F1016 30%, transparent 30%);
+  filter: blur(60px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glowLayer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top center, #545c82 -100%, #0F1016 30%, transparent 30%);
+  filter: blur(60px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fireGlow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  background:
+    radial-gradient(circle at 60% 90%, rgba(255, 140, 0, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 40% 80%, rgba(255, 200, 80, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(255, 80, 0, 0.10) 0%, transparent 70%);
+  animation: fireGlowMove 7s ease-in-out infinite alternate;
+}
+
+@keyframes fireGlowMove {
+  0% {
+    opacity: 0.7;
+    background-position:
+      60% 90%,
+      40% 80%,
+      50% 100%;
+  }
+  100% {
+    opacity: 0.9;
+    background-position:
+      62% 88%,
+      38% 82%,
+      52% 98%;
+  }
+}
+
+.content {
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  width: 100%;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--color-accent-gradient);
+  background-size: 100% 100%;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 6px 12px;
+  letter-spacing: 0.08em;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-size 100ms;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  height: 24px;
+  line-height: 12px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 55px;
+}
+
+.badge:hover {
+  background-size: 200% 100%;
+}
+
+.heroTitle {
+  font-size: 64px;
+  font-family: 'Orbitron', 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text);
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px var(--color-indendia-accent), 0 0 16px var(--color-indendia-accent-end);
+  animation: sablierGlow 2.5s infinite alternate;
+  line-height: 64px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 32px; /* increased space below title */
+}
+
+@keyframes sablierGlow {
+  0% {
+    text-shadow: 0 0 8px var(--color-accent), 0 0 16px var(--color-accent-end);
+  }
+  100% {
+    text-shadow: 0 0 16px var(--color-accent), 0 0 24px var(--color-accent-end);
+  }
+}
+
+.tagline {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 640px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  margin-top: 12px;
+  margin-bottom: 8px; /* increased space below tagline */
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 0;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.actions .btn {
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background: var(--color-accent-gradient);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 32px 0 rgba(255, 153, 0, 0.25), 0 1.5px 8px 0 rgba(255, 153, 0, 0.12);
+  transition: box-shadow 0.2s, background 0.2s, filter 0.2s;
+}
+.btn-primary:hover, .btn-primary:focus {
+  box-shadow: 0 0 40px 0 rgba(255, 153, 0, 0.35), 0 2px 12px 0 rgba(255, 153, 0, 0.18);
+  background: var(--color-accent);
+  color: #fff;
+  filter: brightness(1.08);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--color-border);
+  transition: border 0.2s, color 0.2s, background 0.2s;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  border-image: var(--color-accent-gradient) 1;
+  border-width: 2px;
+  border-style: solid;
+  color: var(--color-accent);
+  background: rgba(255, 165, 0, 0.04);
+} 
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 8px;
+    min-height: 80vh;
+  }
+  
+  .content {
+    gap: 0;
+    padding-top: 0; /* set to 0 */
+  }
+  
+  .badge {
+    margin-top: 0; /* set to 0 */
+    margin-bottom: 12px;
+  }
+  
+  .heroTitle {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .actions .btn {
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    padding: 0 20px;
+    border-radius: 6px;
+  }
+} 
