@@ -155,3 +155,31 @@ body, .app-container {
   background: var(--accent-hover, #60a5fa) !important;
   color: var(--primary-bg) !important;
 }
+
+/* Section Separator */
+.section-separator {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 184, 0, 0.3) 20%, 
+    rgba(255, 184, 0, 0.6) 50%, 
+    rgba(255, 184, 0, 0.3) 80%, 
+    transparent 100%
+  );
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.section-separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #FFB800;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 184, 0, 0.6);
+}

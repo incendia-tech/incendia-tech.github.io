@@ -63,8 +63,9 @@ export default function App() {
       {/* <PrivacySection /> */}
       {/* <EconomicsSection /> */}
       {/* <UseCasesSection /> */}
-      <RoadmapSection />
       <OverviewSection />
+      <div className="section-separator"></div>
+      <RoadmapSection />
       <FooterSection />
     </div>
   );
