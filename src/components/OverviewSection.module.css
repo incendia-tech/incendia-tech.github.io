@@ -177,7 +177,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  color: #FFB800;
+  color: #fff;
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -189,12 +189,12 @@
 }
 
 .stepVisible .iconContainer {
-  border-color: #4DD0E1;
-  background: rgba(77, 208, 225, 0.1);
+  border-color: #FFB800;
+  background: var(--color-bg);
 }
 
 .iconContainer svg {
-  filter: drop-shadow(0 0 8px rgba(77, 208, 225, 0.3));
+  filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.3));
 }
 
 .stepTitle {
