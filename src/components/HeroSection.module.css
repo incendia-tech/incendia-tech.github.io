@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px 16px;
-  min-height: 100vh;
+  box-sizing: border-box;
+  height: 100vh;    /* or min-height:100vh */
+  padding: 160px 0 120px;
   position: relative;
   background: var(--color-bg);
   color: var(--color-text);
@@ -238,6 +239,20 @@
   margin-left: auto;
   margin-right: auto;
   letter-spacing: -0.01em;
+}
+
+.heroContentModern {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 300px 16px 48px 16px !important; /* Force top padding always */
+  text-align: center;
 }
 
 @media (max-width: 768px) {
