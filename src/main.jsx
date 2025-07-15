@@ -15,7 +15,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const config = getDefaultConfig({
   appName: 'Incendia',
-  projectId: '76f110ddaad4d446b0d6147dec487efb', 
+  projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID, 
   chains: [mainnet, goerli],
 });
 
