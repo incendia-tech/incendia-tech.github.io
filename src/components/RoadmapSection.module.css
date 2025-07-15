@@ -66,7 +66,7 @@
 .doneDot {
   background: #4DD0E1;
 }
-.ongoingDot {
+.inprogressDot {
   background: #FFB800;
 }
 .todoDot {
@@ -110,7 +110,7 @@
   border: 1px solid rgba(77, 208, 225, 0.2);
 }
 
-.ongoing {
+.inprogress {
   background: rgba(255, 184, 0, 0.1);
   color: var(--color-accent);
   border: 1px solid rgba(255, 184, 0, 0.2);

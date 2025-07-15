@@ -212,6 +212,34 @@
   background: rgba(255, 165, 0, 0.04);
 } 
 
+/* Minimal fade-in up animation for hero elements */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(32px);
+  animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtitle style for minimal look */
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.01em;
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 40px 8px;

@@ -25,16 +25,16 @@ const RoadmapSection = () => (
           </li>
           <li className={styles.timelineItem}>
             <div className={styles.milestone}>
-              <div className={`${styles.dot} ${styles.ongoingDot}`}></div>
+              <div className={`${styles.dot} ${styles.inprogressDot}`}></div>
               <h3>Building an anonymous auction mechanism</h3>
-              <span className={`${styles.status} ${styles.ongoing}`}>Ongoing</span>
+              <span className={`${styles.status} ${styles.inprogress}`}>In progress</span>
             </div>
           </li>
           <li className={styles.timelineItem}>
             <div className={styles.milestone}>
-              <div className={`${styles.dot} ${styles.ongoingDot}`}></div>
+              <div className={`${styles.dot} ${styles.inprogressDot}`}></div>
               <h3>Testing all systems on the blockchain testnet</h3>
-              <span className={`${styles.status} ${styles.ongoing}`}>Ongoing</span>
+              <span className={`${styles.status} ${styles.inprogress}`}>In progress</span>
             </div>
           </li>
           <li className={styles.timelineItem}>
